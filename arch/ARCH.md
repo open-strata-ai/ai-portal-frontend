@@ -1,4 +1,4 @@
-# ai-portal-frontend · 架构事实源（ARCH）
+# ai-portal-frontend · Architecture fact source (ARCH)
 
 > **auto-generated from `design/DESIGN.md`** — AI coding ground truth for architecture decisions, persona mapping, route structure, and critical UX flows. Edit DESIGN.md to propagate changes.
 
@@ -242,7 +242,7 @@ class SSEClient {
 | Agent builder uses single Zustand store (not multi-step routing) | Enables free-form navigation between steps; state is local until explicit save | §4.1 |
 | `PlatformManifest` is read-only at runtime, fetched once on mount | Boundaries set by admin portal; live reload not needed | §7 |
 | All components from `@openstrata/ui-kit` — no local component library | Avoids fragmentation; version pinned via `bom.yaml` | §6 |
-| SSE parser is in `infrastructure/` not `application/` | Infrastructure concern; domain layer consumes parsed tokens only | §15.6.2 |
+| SSE parser is in `infrastructure/` not `application/` | Infrastructure concern; domain layer consumes parsed tokens only | §15.5.2 |
 | `tenant.id` as `X-Tenant-Id` header on every request | Multi-tenant isolation; gateway uses it for routing + quota | §8 |
 
 ---
