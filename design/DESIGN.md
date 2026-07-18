@@ -10,7 +10,7 @@
 | **Language · Framework** | TypeScript · React 18 + Vite + Ant Design (antd); component library reuse `ai-ui-kit` (see §6) |
 | **Domain** | frontend (core user experience/Agent construction entrance, corresponding to §4.1) |
 | **optional** | false (core, installed by default with starter/profile, see `openstrata-meta/profiles/*.yaml`) |
-| **Platform version** | v1.4.0 |
+| **Platform version** | v1.0.0 |
 | **Document Status** | Draft (draft) |
 | **Responsible Person** | OpenStrata Architecture Group |
 | **Affiliated links** | This repository [arch/ARCH.md](./../arch/ARCH.md) · [skills/SKILLS.md](./../skills/SKILLS.md) · [specs/SPECS.md](./../specs/SPECS.md); Architecture document §4.1 (front-end access layer), §4.3 (AgentSpec Contract), §4.4 (Model Provisioning), §8 (Multi-tenancy), §4.8 (Observability) |
@@ -247,7 +247,7 @@ The usage dashboard (`/usage`) is presented in four dimensions: "Allocated / Use
 - **Containerization**: multi-stage `Dockerfile`, `nginx:alpine` hosting static resources, injecting `VITE_API_BASE` / `VITE_KEYCLOAK_URL` through `env` (configuration external, echoing §15.5 cloud native).
 - **K8s**: `helm/` template (ingress + configmap + deployment), mounts ConfigMap to inject runtime configuration; stateless, horizontal expansion possible.
 - **CI/CD (each repository is independent, §15.6.2)**: `.github/` Pipeline = `lint → tsc type check → single test → build → image scan (Trivy) → push image`. Depends on `ai-ui-kit` pin version (from `bom.yaml`).
-- **Assembly with meta repository**: Boot portal (§13)/Assembly engine press `repos.yaml` to pin `ai-portal-frontend@v1.4.0` to pull the image, and press `profiles/*` to decide whether this repository is included in this file (starter/standard/advanced/full all include this repository).
+- **Assembly with meta repository**: Boot portal (§13)/Assembly engine press `repos.yaml` to pin `ai-portal-frontend@v1.0.0` to pull the image, and press `profiles/*` to decide whether this repository is included in this file (starter/standard/advanced/full all include this repository).
 
 ---
 

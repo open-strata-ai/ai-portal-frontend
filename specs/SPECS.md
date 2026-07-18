@@ -143,7 +143,7 @@ VITE_KEYCLOAK_CLIENT_ID=ai-portal
 replicaCount: 2
 image:
   repository: registry.example.com/ai-portal-frontend
-  tag: "v1.4.0"
+  tag: "v1.0.0"
 ingress:
   enabled: true
   host: portal.openstrata.example.com
@@ -161,7 +161,7 @@ configmap:
 | advanced | yes | Core — always included |
 | full | yes | Core — always included |
 
-> `repos.yaml` pins `ai-portal-frontend@v1.4.0`. Assembly engine pulls image by tag from the registry.
+> `repos.yaml` pins `ai-portal-frontend@v1.0.0`. Assembly engine pulls image by tag from the registry.
 
 ---
 
