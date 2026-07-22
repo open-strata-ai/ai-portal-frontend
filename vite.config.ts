@@ -9,10 +9,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@openstrata/ai-ui-kit': path.resolve(__dirname, '../ai-ui-kit/src/index.ts'),
+      '@openstrata/ai-ui-kit': path.resolve(__dirname, 'ai-ui-kit-src/src/index.ts'),
+      'mermaid': path.resolve(__dirname, 'mermaid-stub.mjs'),
     },
   },
-  server: { port: 5173, proxy: { '/api': 'http://localhost:8080' } },
+  server: { port: 5173, proxy: { '/api': 'http://localhost:8092' } },
   // `mermaid` is an optional, lazily-loaded dependency of ai-ui-kit; the
   // MermaidRenderer degrades gracefully when it is absent.
   build: {

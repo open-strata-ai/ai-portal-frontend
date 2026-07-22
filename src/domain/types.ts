@@ -44,7 +44,9 @@ export interface AgentSpec {
   modelBinding?: ModelBinding;
   stateMachine?: StateMachine;
   guardrails?: Guardrail[];
+  status?: 'draft' | 'published' | 'deprecated';
   createdAt: number;
+  updatedAt?: number;
 }
 
 export interface ModelCard {
